@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Update the system
-sudo apt update -y
+# Update the package lists
+sudo apt-get update -y
 
 # Install Python and pip
-sudo apt install -y python3 python3-pip
+sudo apt-get install -y python3 python3-pip
 
 # Install the required Python packages
 pip3 install -r requirements-cli.txt
@@ -13,22 +13,16 @@ pip3 install -r requirements-cli.txt
 run_script() {
     case $1 in
         driveid)
-            python3 driveid.py
+            python3 gdrive_scripts/driveid.py
             ;;
         add_to_team_drive)
-            python3 add_to_team_drive.py
+            python3 gdrive_scripts/add_to_team_drive.py
             ;;
         gen_sa_accounts)
-            python3 gen_sa_accounts.py
-            ;;
-        generate_drive_token)
-            python3 generate_drive_token.py
-            ;;
-        generate_string_session)
-            python3 generate_string_session.py
+            python3 gdrive_scripts/gen_sa_accounts.py
             ;;
         *)
-            echo "Invalid option. Available options are: driveid, add_to_team_drive, gen_sa_accounts, generate_drive_token, generate_string_session."
+            echo "Invalid script name"
             ;;
     esac
 }

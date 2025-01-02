@@ -13,22 +13,16 @@ pip install -r requirements-cli.txt
 run_script() {
     case $1 in
         driveid)
-            python driveid.py
+            python gdrive_scripts/driveid.py
             ;;
         add_to_team_drive)
-            python add_to_team_drive.py
+            python gdrive_scripts/add_to_team_drive.py
             ;;
         gen_sa_accounts)
-            python gen_sa_accounts.py
-            ;;
-        generate_drive_token)
-            python generate_drive_token.py
-            ;;
-        generate_string_session)
-            python generate_string_session.py
+            python gdrive_scripts/gen_sa_accounts.py
             ;;
         *)
-            echo "Invalid option. Available options are: driveid, add_to_team_drive, gen_sa_accounts, generate_drive_token, generate_string_session."
+            echo "Invalid script name"
             ;;
     esac
 }

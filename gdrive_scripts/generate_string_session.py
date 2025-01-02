@@ -1,10 +1,6 @@
 try:
     from pyrogram import Client
-except Exception as e:
-    print(e)
-    print("\nInstall pyrogram: pip3 install pyrogram")
-    exit(1)
-
+# ...existing code...
 print("Required pyrogram V2 or greater.")
 API_KEY = int(input("Enter API KEY: "))
 API_HASH = input("Enter API HASH: ")

@@ -45,13 +45,13 @@ fi
 run_script() {
     case $1 in
         driveid)
-            python driveid.py
+            python3 gdrive_scripts/driveid.py
             ;;
         add_to_team_drive)
-            python add_to_team_drive.py
+            python3 gdrive_scripts/add_to_team_drive.py
             ;;
         gen_sa_accounts)
-            python gen_sa_accounts.py
+            python3 gdrive_scripts/gen_sa_accounts.py
             ;;
         generate_drive_token)
             python generate_drive_token.py
